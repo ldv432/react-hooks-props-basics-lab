@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import About from "./About";
@@ -11,8 +11,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home name={ user.name } city={ user.city } color={user.color}/>
+      <About bio={ user.bio }/>
     </div>
   );
 }
